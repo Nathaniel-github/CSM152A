@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab2.srcs/sources_1/new/count_leading_zeros.v" \
+"../../../../lab2.srcs/sources_1/new/extract_leading_bits.v" \
+"../../../../lab2.srcs/sources_1/new/sign_magnitude_converter.v" \
+"../../../../lab2.srcs/sources_1/new/fpcvt.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
