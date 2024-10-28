@@ -29,11 +29,14 @@ module extract_leading_bits(
     output wire [3:0] sig;
     output wire fifth;
     
-    wire [11:0] last_bit_extractor;
-    assign last_bit_extractor = signed_num;
-    assign last_bit_extractor = last_bit_extractor >> (exp - 1);
-    assign fifth = last_bit_extractor[0];
+    reg [11:0] last_bit_extractor;
     
+    always @(*) begin
+        last_bit_extractor = signed_num;
+        last_bit_extractor = last_bit_extractor >> (exp-1);
+    end
+    
+    assign fifth = last_bit_extractor[0];
     assign sig = (signed_num >> exp);
     
 endmodule

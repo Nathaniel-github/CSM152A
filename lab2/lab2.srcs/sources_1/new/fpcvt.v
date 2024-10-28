@@ -70,7 +70,6 @@ module FPCVT(
     
     rounding get_rounded_value(
         .sig(sig), 
-        .signed_num(temp_mag), 
         .exp(exp), 
         .fifth(f), 
         .round_sig(F), 

@@ -21,29 +21,42 @@
 
 
 module rounding(
-    sig, signed_num, exp, fifth, round_sig, round_exp
+    sig, exp, fifth, round_sig, round_exp
     );
     
     input wire [3:0] sig;
-    input wire [11:0] signed_num;
     input wire [2:0] exp;
     input wire fifth;
-    output reg [3:0] round_sig;
-    output reg [2:0] round_exp;
+    output wire [3:0] round_sig;
+    output wire [2:0] round_exp;
     
-    reg round;
+    reg [2:0] temp_re;
+    reg [3:0] temp_rs;
     
     always @(*) begin
         if (fifth == 0) begin
-            round_sig = sig;
-            round_exp = exp;
+            temp_rs = sig;
+            temp_re = exp;
         end
         else begin
-        // add edge cases here next time
-            round_sig = sig + 1;
-            round_exp = exp;
+            if (sig == 4'b1111) begin
+                if (exp == 3'b111) begin
+                    temp_re = exp;
+                    temp_rs = sig;
+                end
+                else begin
+                    temp_re = exp + 1;
+                    temp_rs = 4'b1000;
+                end
+            end
+            else begin
+                temp_rs = sig + 1;
+                temp_re = exp;
+            end
         end
     end
-        
+    
+    assign round_sig = temp_rs;
+    assign round_exp = temp_re; 
     
 endmodule

@@ -25,18 +25,37 @@ module count_leading_zeros(
     );
     
     input wire [11:0] signed_num;
-    output reg [2:0] exp;
+    output wire [2:0] exp;
+    
+    reg[2:0] temp_exp;
     
     always @(*) begin
-        case(signed_num)
-            12'b01??????????: exp = 3'b111;
-            12'b001?????????: exp = 3'b110;
-            12'b0001????????: exp = 3'b101;
-            12'b00001???????: exp = 3'b100;
-            12'b000001??????: exp = 3'b011;
-            12'b0000001?????: exp = 3'b010;
-            12'b00000001????: exp = 3'b001;
-            default: exp = 3'b000;
-        endcase
+        if (signed_num[10]) begin
+            temp_exp = 3'b111;
+        end
+        else if (signed_num[9]) begin
+            temp_exp = 3'b110;
+        end
+        else if (signed_num[8]) begin
+            temp_exp = 3'b101;
+        end
+        else if (signed_num[7]) begin
+            temp_exp = 3'b100;
+        end
+        else if (signed_num[6]) begin
+            temp_exp = 3'b011;
+        end
+        else if (signed_num[5]) begin
+            temp_exp = 3'b010;
+        end
+        else if (signed_num[4]) begin
+            temp_exp = 3'b001;
+        end
+        else begin
+            temp_exp = 3'b000;
+        end
     end
+    
+    assign exp = temp_exp;
+    
 endmodule
