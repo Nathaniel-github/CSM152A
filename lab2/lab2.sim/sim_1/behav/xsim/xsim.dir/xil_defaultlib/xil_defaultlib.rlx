@@ -2,10 +2,10 @@
 2018.2
 Jun 14 2018
 20:41:02
-D:/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1529022456,verilog,,,,glbl,,,,,,,,
-D:/lab2/lab2.srcs/sim_1/new/tb.v,1730145526,verilog,,,,tb,,,,,,,,
-D:/lab2/lab2.srcs/sources_1/new/count_leading_zeros.v,1730144638,verilog,,D:/lab2/lab2.srcs/sources_1/new/extract_leading_bits.v,,count_leading_zeros,,,,,,,,
-D:/lab2/lab2.srcs/sources_1/new/extract_leading_bits.v,1730143340,verilog,,D:/lab2/lab2.srcs/sources_1/new/rounding.v,,extract_leading_bits,,,,,,,,
-D:/lab2/lab2.srcs/sources_1/new/fpcvt.v,1730143790,verilog,,D:/lab2/lab2.srcs/sources_1/new/count_leading_zeros.v,,FPCVT,,,,,,,,
-D:/lab2/lab2.srcs/sources_1/new/rounding.v,1730146026,verilog,,D:/lab2/lab2.srcs/sources_1/new/sign_magnitude_converter.v,,rounding,,,,,,,,
-D:/lab2/lab2.srcs/sources_1/new/sign_magnitude_converter.v,1729713698,verilog,,D:/lab2/lab2.srcs/sim_1/new/tb.v,,sign_magnitude_converter,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1529022456,verilog,,,,glbl,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sim_1/new/tb.v,1730316507,verilog,,,,tb,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/count_leading_zeros.v,1730144638,verilog,,C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/extract_leading_bits.v,,count_leading_zeros,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/extract_leading_bits.v,1730143340,verilog,,C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/rounding.v,,extract_leading_bits,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/fpcvt.v,1730143790,verilog,,C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/count_leading_zeros.v,,FPCVT,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/rounding.v,1730146026,verilog,,C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/sign_magnitude_converter.v,,rounding,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sources_1/new/sign_magnitude_converter.v,1729713698,verilog,,C:/Users/eayal/OneDrive/Desktop/CSM152A_repo/CSM152A/lab2/lab2.srcs/sim_1/new/tb.v,,sign_magnitude_converter,,,,,,,,

@@ -26,6 +26,10 @@ module tb;
     wire [2:0] E;
     wire [3:0] F;
     
+    //reg [11:0] mag_test;
+    
+    //sign_magnitude_converter
+    
     FPCVT tester(
         .D(D),
         .S(S),
