@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // Clock Module that takes the 100 MHz master clock and outputs 4 clocks:
-// 2 Hz, 1 Hz, ?? Hz, and adjusment mode clock
+// 2 Hz, 1 Hz, 60 Hz, and adjusment mode clock
 module clock_divider(
     input wire clk,
     input wire rst,
@@ -84,7 +84,7 @@ module clock_divider(
             faster_counter <= 0;
             faster_temp <= 0;
         end
-        else if (faster_counter == 250_000 - 1) begin
+        else if (faster_counter == 55_000 - 1) begin
             faster_counter <= 0;
             faster_temp <= ~faster_temp;
         end

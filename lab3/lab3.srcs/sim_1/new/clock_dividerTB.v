@@ -25,11 +25,16 @@ module clock_dividerTB;
     reg master;     // master clock
     reg reset;      // reset
     
-    // Outputs
+/*    // Outputs
     wire two;       // 2 Hz clock
     wire one;       // 1 Hz clock
     wire faster;    // 200 Hz clock
     wire adj;       // ?? Hz clock
+    
+    wire min_left;
+    wire min_right;
+    wire sec_left;
+    wire sec_right;
     
     clock_divider clk_test(
         .clk(master),
@@ -38,6 +43,24 @@ module clock_dividerTB;
         .one_clk(one),
         .faster_clk(faster),
         .adj_clk(adj)
+    );
+    
+    counter counter_test(
+        .clk(master),
+        .rst(reset),
+        .minL(min_left),
+        .minR(min_right),
+        .secL(sec_left),
+        .secR(sec_right)
+    );*/
+    wire[3:0] anode;
+    wire[6:0] display;
+    
+    stopwatch stopwatch_test(
+        .clk(master),
+        .rst(reset),
+        .anode(anode),
+        .display(display)
     );
     
     // Initialize the master clock.
@@ -57,4 +80,8 @@ module clock_dividerTB;
     // toggle master clock b/w 0 and 1 to simulate a continous clock signal
     // delay the forever loop by 5 ns each iteration [as (10 ns)/2 = 5 ns per half cycle]
     always #5 master = ~master;
+    
+    initial begin
+        
+    end
 endmodule

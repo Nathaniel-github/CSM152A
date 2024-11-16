@@ -3,5 +3,9 @@
 Jun 14 2018
 20:41:02
 C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sim_1/new/clock_dividerTB.v,1731199076,verilog,,,,clock_dividerTB,,,,,,,,
-C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/clock_divider.v,1731203480,verilog,,C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sim_1/new/clock_dividerTB.v,,clock_divider,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sim_1/new/clock_dividerTB.v,1731737710,verilog,,,,clock_dividerTB,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/clock_divider.v,1731731887,verilog,,C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/counter.v,,clock_divider,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/counter.v,1731532333,verilog,,C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/multiplexing_display.v,,counter,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/multiplexing_display.v,1731735608,verilog,,C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/seven_seg_disp.v,,multiplexing_display,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/seven_seg_disp.v,1731735302,verilog,,C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/stopwatch.v,,seven_seg_disp,,,,,,,,
+C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/stopwatch.v,1731735763,verilog,,C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sim_1/new/clock_dividerTB.v,,stopwatch,,,,,,,,
