@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov 17 04:17:21 2024
+| Date         : Sun Nov 17 05:31:09 2024
 | Host         : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command      : report_drc -file stopwatch_drc_routed.rpt -pb stopwatch_drc_routed.pb -rpx stopwatch_drc_routed.rpx
 | Design       : stopwatch
@@ -24,18 +24,39 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
-+----------+----------+-------------------+------------+
-| Rule     | Severity | Description       | Violations |
-+----------+----------+-------------------+------------+
-| PDRC-153 | Warning  | Gated clock check | 1          |
-+----------+----------+-------------------+------------+
+             Violations found: 3
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
 Net count/pause_flag_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin count/pause_flag_reg_LDC_i_1/O, cell count/pause_flag_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net divide/secs_reg[0] is a gated clock net sourced by a combinational pin divide/secs[5]_i_3/O, cell divide/secs[5]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT divide/secs[5]_i_3 is driving clock pin of 12 cells. This could lead to large hold time violations. First few involved cells are:
+    count/mins_reg[0] {FDCE}
+    count/mins_reg[1] {FDCE}
+    count/mins_reg[2] {FDCE}
+    count/mins_reg[3] {FDCE}
+    count/mins_reg[4] {FDCE}
+    count/mins_reg[5] {FDCE}
+    count/secs_reg[0] {FDCE}
+    count/secs_reg[1] {FDCE}
+    count/secs_reg[2] {FDCE}
+
 Related violations: <none>
 
 

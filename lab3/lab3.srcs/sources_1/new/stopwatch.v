@@ -55,11 +55,14 @@ module stopwatch(
         .adj_clk(adj)
     );
     
-    // feed the 1 Hz clock to the counter
+    // feed the 1 Hz and 2 Hz clocks to the counter
     counter count(
-        .clk(one),
+        .one_clk(one),
+        .two_clk(two),
         .rst(rst),
         .pause(pause),
+        .select(select),
+        .adjust(adjust),
         .minL(minL),
         .minR(minR),
         .secL(secL),

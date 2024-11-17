@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov 17 04:17:03 2024
+| Date         : Sun Nov 17 05:30:52 2024
 | Host         : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file stopwatch_control_sets_placed.rpt
 | Design       : stopwatch
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |     7 |
-| Unused register locations in slices containing registers |    38 |
+| Unused register locations in slices containing registers |    32 |
 +----------------------------------------------------------+-------+
 
 
@@ -47,10 +47,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              26 |            9 |
-| No           | No                    | Yes                    |             166 |           22 |
+| No           | No                    | Yes                    |             220 |           31 |
 | No           | Yes                   | No                     |               2 |            1 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              24 |            5 |
+| Yes          | No                    | Yes                    |              24 |            6 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -61,13 +61,13 @@ Table of Contents
 +-------------------------------------------+-----------------------+----------------------------------+------------------+----------------+
 |                Clock Signal               |     Enable Signal     |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
 +-------------------------------------------+-----------------------+----------------------------------+------------------+----------------+
-|  divide/CLK                               |                       | count/pause_flag_reg_LDC_i_1_n_0 |                1 |              2 |
-|  divide/CLK                               |                       | count/pause_flag_reg_LDC_i_2_n_0 |                1 |              2 |
+|  divide/one                               |                       | count/pause_flag_reg_LDC_i_1_n_0 |                1 |              2 |
+|  divide/one                               |                       | count/pause_flag_reg_LDC_i_2_n_0 |                1 |              2 |
 |  count/pause_flag_reg_LDC_i_1_n_0         |                       | count/pause_flag_reg_LDC_i_2_n_0 |                1 |              2 |
-|  divide/CLK                               | count/mins[5]_i_1_n_0 | rst_IBUF                         |                3 |             12 |
-|  divide/CLK                               | count/secs[5]_i_1_n_0 | rst_IBUF                         |                2 |             12 |
+|  divide/secs_reg[0]                       | count/mins[5]_i_1_n_0 | rst_IBUF                         |                3 |             12 |
+|  divide/secs_reg[0]                       | count/secs[5]_i_1_n_0 | rst_IBUF                         |                3 |             12 |
 |  divide/FSM_sequential_LED_counter_reg[0] |                       |                                  |                9 |             26 |
-|  clk_IBUF_BUFG                            |                       | rst_IBUF                         |               20 |            162 |
+|  clk_IBUF_BUFG                            |                       | rst_IBUF                         |               29 |            216 |
 +-------------------------------------------+-----------------------+----------------------------------+------------------+----------------+
 
 
