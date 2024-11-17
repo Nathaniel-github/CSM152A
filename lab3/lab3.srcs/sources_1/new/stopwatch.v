@@ -23,6 +23,9 @@
 module stopwatch(
     input wire clk,
     input wire rst,
+    input wire pause,
+    //input wire select,
+    //input wire adjust,
     output wire[3:0] anode,
     output wire[6:0] display
     );
@@ -39,6 +42,7 @@ module stopwatch(
     wire[6:0] disp_secL;
     wire[6:0] disp_secR;
     
+    // four clocks
     wire two, one, faster, adj;
     
     // divide the master clock
@@ -51,15 +55,18 @@ module stopwatch(
         .adj_clk(adj)
     );
     
+    // feed the 1 Hz clock to the counter
     counter count(
         .clk(one),
         .rst(rst),
+        .pause(pause),
         .minL(minL),
         .minR(minR),
         .secL(secL),
         .secR(secR)
     );
     
+    // obtain the seven segment display encodings for each digit
     seven_seg_disp minuteL(
         .digit(minL),
         .disp(disp_minL)

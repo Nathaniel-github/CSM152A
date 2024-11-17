@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Nov 16 01:02:53 2024
+| Date             : Sun Nov 17 02:32:04 2024
 | Host             : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command          : report_power -file stopwatch_power_routed.rpt -pb stopwatch_power_summary_routed.pb -rpx stopwatch_power_routed.rpx
 | Design           : stopwatch
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.071        |
+| Total On-Chip Power (W)  | 0.070        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.002        |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      236 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      101 |     20800 |            0.49 |
-|   Register     |    <0.001 |       79 |     41600 |            0.19 |
+| Slice Logic    |    <0.001 |      247 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      107 |     20800 |            0.51 |
 |   CARRY4       |    <0.001 |       14 |      8150 |            0.17 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |      202 |       --- |             --- |
-| I/O            |    <0.001 |       13 |       106 |           12.26 |
+|   Register     |    <0.001 |       82 |     41600 |            0.20 |
+|   Others       |     0.000 |        6 |       --- |             --- |
+| Signals        |    <0.001 |      213 |       --- |             --- |
+| I/O            |    <0.001 |       14 |       106 |           13.21 |
 | Static Power   |     0.068 |          |           |                 |
-| Total          |     0.071 |          |           |                 |
+| Total          |     0.070 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
+| Vccint    |       1.000 |     0.011 |       0.002 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov 17 02:32:25 2024
-# Process ID: 6096
+# Start of session at: Sun Nov 17 02:31:13 2024
+# Process ID: 21084
 # Current directory: C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.runs/impl_1
 # Command line: vivado.exe -log stopwatch.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source stopwatch.tcl -notrace
 # Log file: C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.runs/impl_1/stopwatch.vdi
