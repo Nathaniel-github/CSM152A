@@ -100,7 +100,7 @@ module clock_divider(
             adj_counter <= 0;
             adj_temp <= 0;
         end
-        else if (adj_counter == 25_000_000 - 1) begin
+        else if (adj_counter == 12_500_000 - 1) begin
             adj_counter <= 0;
             adj_temp <= ~adj_temp;
         end

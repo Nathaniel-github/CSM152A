@@ -24,8 +24,8 @@ module stopwatch(
     input wire clk,
     input wire rst,
     input wire pause,
-    //input wire select,
-    //input wire adjust,
+    input wire select,
+    input wire adjust,
     output wire[3:0] anode,
     output wire[6:0] display
     );
@@ -90,6 +90,8 @@ module stopwatch(
     multiplexing_display multiplexer(
         .faster_clk(faster),
         .adj_clk(adj),
+        .select(select),
+        .adjust(adjust),
         .disp_minL(disp_minL),
         .disp_minR(disp_minR),
         .disp_secL(disp_secL),
