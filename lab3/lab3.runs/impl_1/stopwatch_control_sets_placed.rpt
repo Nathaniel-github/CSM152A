@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Nov 18 04:00:28 2024
+| Date         : Mon Nov 18 12:43:28 2024
 | Host         : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file stopwatch_control_sets_placed.rpt
 | Design       : stopwatch
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    12 |
-| Unused register locations in slices containing registers |    48 |
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    36 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            3 |
+|      2 |            1 |
 |      8 |            1 |
 |     12 |            2 |
 |    16+ |            6 |
@@ -47,11 +47,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              34 |           12 |
-| No           | No                    | Yes                    |             220 |           28 |
-| No           | Yes                   | No                     |             146 |           21 |
+| No           | No                    | No                     |              36 |           10 |
+| No           | No                    | Yes                    |             216 |           27 |
+| No           | Yes                   | No                     |             144 |           20 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              24 |            5 |
+| Yes          | No                    | Yes                    |              24 |            6 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -59,21 +59,19 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------+---------------+----------------------------------------+------------------+----------------+
-|            Clock Signal           | Enable Signal |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+-----------------------------------+---------------+----------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG                    |               | count/pause_flag_reg_LDC_i_2_n_0       |                1 |              2 |
-|  clk_IBUF_BUFG                    |               | count/pause_flag_reg_LDC_i_1_n_0       |                1 |              2 |
-|  count/pause_flag_reg_LDC_i_1_n_0 |               | count/pause_flag_reg_LDC_i_2_n_0       |                1 |              2 |
-|  clk_IBUF_BUFG                    |               |                                        |                4 |              8 |
-|  divide/mins_reg[0]               | count/mins    | reset_debounce/AR[0]                   |                3 |             12 |
-|  divide/mins_reg[0]               | count/secs    | reset_debounce/AR[0]                   |                2 |             12 |
-|  divide/CLK                       |               |                                        |                8 |             26 |
-|  clk_IBUF_BUFG                    |               | adjust_debounce/duration[0]_i_1__1_n_0 |                5 |             36 |
-|  clk_IBUF_BUFG                    |               | pause_debounce/duration[0]_i_1_n_0     |                5 |             36 |
-|  clk_IBUF_BUFG                    |               | reset_debounce/duration[0]_i_1__2_n_0  |                5 |             36 |
-|  clk_IBUF_BUFG                    |               | select_debounce/duration[0]_i_1__0_n_0 |                5 |             36 |
-|  clk_IBUF_BUFG                    |               | reset_debounce/AR[0]                   |               26 |            216 |
-+-----------------------------------+---------------+----------------------------------------+------------------+----------------+
++-----------------------+-----------------------+----------------------------------------+------------------+----------------+
+|      Clock Signal     |     Enable Signal     |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++-----------------------+-----------------------+----------------------------------------+------------------+----------------+
+|  pause_debounce/pause |                       |                                        |                1 |              2 |
+|  clk_IBUF_BUFG        |                       |                                        |                3 |              8 |
+|  divide/mins_reg[0]   | count/mins            | reset_debounce/AR[0]                   |                2 |             12 |
+|  divide/mins_reg[0]   | count/secs[5]_i_1_n_0 | reset_debounce/AR[0]                   |                4 |             12 |
+|  divide/CLK           |                       |                                        |                6 |             26 |
+|  clk_IBUF_BUFG        |                       | adjust_debounce/duration[0]_i_1__0_n_0 |                5 |             36 |
+|  clk_IBUF_BUFG        |                       | pause_debounce/duration[0]_i_1__2_n_0  |                5 |             36 |
+|  clk_IBUF_BUFG        |                       | reset_debounce/duration[0]_i_1__1_n_0  |                5 |             36 |
+|  clk_IBUF_BUFG        |                       | select_debounce/duration[0]_i_1_n_0    |                5 |             36 |
+|  clk_IBUF_BUFG        |                       | reset_debounce/AR[0]                   |               27 |            216 |
++-----------------------+-----------------------+----------------------------------------+------------------+----------------+
 
 

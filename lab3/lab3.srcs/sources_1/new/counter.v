@@ -60,12 +60,10 @@ module counter(
     end
     assign clk = temp_clk;
     
-    // check if the pause button is pressed at every 1 Hz clock edge
-    always @ (posedge (master_clk) or posedge (pause))
+    // check if the pause button is pressed
+    always @ (posedge (pause))
     begin
-        if (pause) begin
-            pause_flag <= ~pause_flag;
-        end
+        pause_flag <= ~pause_flag;
     end
     
     always @ (posedge (clk) or posedge (rst))
