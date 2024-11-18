@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sun Nov 17 05:31:10 2024
+| Date             : Mon Nov 18 04:00:47 2024
 | Host             : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command          : report_power -file stopwatch_power_routed.rpt -pb stopwatch_power_summary_routed.pb -rpx stopwatch_power_routed.rpx
 | Design           : stopwatch
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.071        |
+| Total On-Chip Power (W)  | 0.072        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.004        |
 | Device Static (W)        | 0.068        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      395 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      160 |     20800 |            0.77 |
-|   CARRY4       |    <0.001 |       28 |      8150 |            0.34 |
-|   Register     |    <0.001 |      136 |     41600 |            0.33 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      356 |       --- |             --- |
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      512 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      175 |     20800 |            0.84 |
+|   CARRY4       |    <0.001 |       48 |      8150 |            0.59 |
+|   Register     |    <0.001 |      212 |     41600 |            0.51 |
+|   Others       |     0.000 |       14 |       --- |             --- |
+| Signals        |    <0.001 |      455 |       --- |             --- |
 | I/O            |    <0.001 |       16 |       106 |           15.09 |
 | Static Power   |     0.068 |          |           |                 |
-| Total          |     0.071 |          |           |                 |
+| Total          |     0.072 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
+| Vccint    |       1.000 |     0.013 |       0.004 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -137,13 +137,17 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------+-----------+
-| Name          | Power (W) |
-+---------------+-----------+
-| stopwatch     |     0.003 |
-|   count       |    <0.001 |
-|   divide      |     0.002 |
-|   multiplexer |    <0.001 |
-+---------------+-----------+
++-------------------+-----------+
+| Name              | Power (W) |
++-------------------+-----------+
+| stopwatch         |     0.004 |
+|   adjust_debounce |    <0.001 |
+|   count           |    <0.001 |
+|   divide          |     0.002 |
+|   multiplexer     |    <0.001 |
+|   pause_debounce  |    <0.001 |
+|   reset_debounce  |    <0.001 |
+|   select_debounce |    <0.001 |
++-------------------+-----------+
 
 

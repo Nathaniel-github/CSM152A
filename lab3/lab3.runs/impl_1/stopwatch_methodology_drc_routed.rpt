@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov 17 05:31:10 2024
+| Date         : Mon Nov 18 04:00:46 2024
 | Host         : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file stopwatch_methodology_drc_routed.rpt -pb stopwatch_methodology_drc_routed.pb -rpx stopwatch_methodology_drc_routed.rpx
 | Design       : stopwatch
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 31
+             Violations found: 32
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert  | 2          |
-| TIMING-17 | Warning  | Non-clocked sequential cell   | 27         |
-| TIMING-18 | Warning  | Missing input or output delay | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell   | 25         |
+| TIMING-18 | Warning  | Missing input or output delay | 4          |
 | TIMING-20 | Warning  | Non-clocked latch             | 1          |
 +-----------+----------+-------------------------------+------------+
 
@@ -77,112 +77,117 @@ Related violations: <none>
 
 TIMING-17#7 Warning
 Non-clocked sequential cell  
-The clock pin count/pause_flag_reg_C/C is not reached by a timing clock
+The clock pin count/secs_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Warning
 Non-clocked sequential cell  
-The clock pin count/pause_flag_reg_P/C is not reached by a timing clock
+The clock pin count/secs_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Warning
 Non-clocked sequential cell  
-The clock pin count/secs_reg[0]/C is not reached by a timing clock
+The clock pin count/secs_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Warning
 Non-clocked sequential cell  
-The clock pin count/secs_reg[1]/C is not reached by a timing clock
+The clock pin count/secs_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Warning
 Non-clocked sequential cell  
-The clock pin count/secs_reg[2]/C is not reached by a timing clock
+The clock pin count/secs_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Warning
 Non-clocked sequential cell  
-The clock pin count/secs_reg[3]/C is not reached by a timing clock
+The clock pin count/secs_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Warning
 Non-clocked sequential cell  
-The clock pin count/secs_reg[4]/C is not reached by a timing clock
+The clock pin multiplexer/FSM_sequential_LED_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Warning
 Non-clocked sequential cell  
-The clock pin count/secs_reg[5]/C is not reached by a timing clock
+The clock pin multiplexer/FSM_sequential_LED_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/FSM_sequential_LED_counter_reg[0]/C is not reached by a timing clock
+The clock pin multiplexer/anode_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/FSM_sequential_LED_counter_reg[1]/C is not reached by a timing clock
+The clock pin multiplexer/anode_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/anode_reg[0]/C is not reached by a timing clock
+The clock pin multiplexer/anode_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/anode_reg[1]/C is not reached by a timing clock
+The clock pin multiplexer/anode_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/anode_reg[2]/C is not reached by a timing clock
+The clock pin multiplexer/display_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/anode_reg[3]/C is not reached by a timing clock
+The clock pin multiplexer/display_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/display_reg[0]/C is not reached by a timing clock
+The clock pin multiplexer/display_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/display_reg[1]/C is not reached by a timing clock
+The clock pin multiplexer/display_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/display_reg[2]/C is not reached by a timing clock
+The clock pin multiplexer/display_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Warning
 Non-clocked sequential cell  
-The clock pin multiplexer/display_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#25 Warning
-Non-clocked sequential cell  
-The clock pin multiplexer/display_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#26 Warning
-Non-clocked sequential cell  
 The clock pin multiplexer/display_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#27 Warning
+TIMING-17#25 Warning
 Non-clocked sequential cell  
 The clock pin multiplexer/display_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
+An input delay is missing on ajt relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on pau relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
 An input delay is missing on rst relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on sel relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-20#1 Warning

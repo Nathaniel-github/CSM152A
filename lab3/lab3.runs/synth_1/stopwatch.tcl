@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +32,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/clock_divider.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/counter.v
+  C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/debouncer.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/multiplexing_display.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/seven_seg_disp.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab3/lab3.srcs/sources_1/new/stopwatch.v

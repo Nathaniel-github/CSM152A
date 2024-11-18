@@ -21,6 +21,7 @@
 
 
 module counter(
+    input wire master_clk,
     input wire one_clk,
     input wire two_clk,
     input wire rst,
@@ -60,7 +61,7 @@ module counter(
     assign clk = temp_clk;
     
     // check if the pause button is pressed at every 1 Hz clock edge
-    always @ (posedge (one_clk) or posedge (pause))
+    always @ (posedge (master_clk) or posedge (pause))
     begin
         if (pause) begin
             pause_flag <= ~pause_flag;
@@ -74,12 +75,12 @@ module counter(
             secs <= 0;
         end
         // only count if pause_flag isn't set (i.e. when pause button isn't toggled)
-        else if (~pause_flag) begin
+        else if (pause_flag == 0) begin
             // increment minutes or seconds at a rate of 2 Hz in adjustment mode
             if (adjust) begin
                 // if select is 1, increment seconds
                 if (select) begin
-                    if (secs == 59) begin
+                    if (secs >= 59) begin
                         secs <= 0;
                     end
                     else begin
@@ -88,7 +89,7 @@ module counter(
                 end
                 // otherwise, select is 0 so increment minutes
                 else begin
-                    if (mins == 59) begin
+                    if (mins >= 59) begin
                         mins <= 0;
                     end
                     else begin
@@ -102,7 +103,7 @@ module counter(
                     mins <= 0;
                     secs <= 0;
                 end
-                else if (secs == 59) begin
+                else if (secs >= 59) begin
                     mins <= mins + 1;
                     secs <= 0;
                 end

@@ -21,11 +21,11 @@
 
 
 module stopwatch(
-    input wire clk,
-    input wire rst,
-    input wire pause,
-    input wire select,
-    input wire adjust,
+    input wire clk,             // master clock
+    input wire rst,             // reset button user input
+    input wire pau,             // pause button user input
+    input wire sel,             // select switch user input
+    input wire ajt,             // adjust swtich user input
     output wire[3:0] anode,
     output wire[6:0] display
     );
@@ -45,10 +45,44 @@ module stopwatch(
     // four clocks
     wire two, one, faster, adj;
     
+    // debounced push buttons
+    wire reset, pause;
+    
+    // debounced switches
+    wire select, adjust;
+    
+    // debounce the reset push button
+    debouncer reset_debounce(
+        .clk(clk),
+        .button(rst),
+        .button_debounced(reset)
+    );
+    
+    // debounce the pause push button
+    debouncer pause_debounce(
+        .clk(clk),
+        .button(pau),
+        .button_debounced(pause)
+    );
+    
+    // debounce the select switch
+    debouncer select_debounce(
+        .clk(clk),
+        .button(sel),
+        .button_debounced(select)
+    );
+    
+    // debounce the adjust switch
+    debouncer adjust_debounce(
+        .clk(clk),
+        .button(ajt),
+        .button_debounced(adjust)
+    );
+    
     // divide the master clock
     clock_divider divide(
         .clk(clk),
-        .rst(rst),
+        .rst(reset),
         .two_clk(two),
         .one_clk(one),
         .faster_clk(faster),
@@ -57,9 +91,10 @@ module stopwatch(
     
     // feed the 1 Hz and 2 Hz clocks to the counter
     counter count(
+        .master_clk(clk),
         .one_clk(one),
         .two_clk(two),
-        .rst(rst),
+        .rst(reset),
         .pause(pause),
         .select(select),
         .adjust(adjust),
