@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov 30 04:41:31 2024
+| Date         : Wed Dec  4 02:04:24 2024
 | Host         : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
 | Design       : top_module
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    12 |
-| Unused register locations in slices containing registers |    26 |
+| Number of unique control sets                            |    22 |
+| Unused register locations in slices containing registers |    62 |
 +----------------------------------------------------------+-------+
 
 
@@ -36,7 +36,7 @@ Table of Contents
 +--------+--------------+
 |      8 |            1 |
 |     12 |            1 |
-|    16+ |           10 |
+|    16+ |           20 |
 +--------+--------------+
 
 
@@ -46,11 +46,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              34 |           12 |
-| No           | No                    | Yes                    |              12 |            4 |
-| No           | Yes                   | No                     |             496 |           64 |
+| No           | No                    | No                     |              70 |           25 |
+| No           | No                    | Yes                    |              12 |            3 |
+| No           | Yes                   | No                     |             856 |          114 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              40 |           11 |
+| Yes          | No                    | Yes                    |              40 |            8 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -58,21 +58,31 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-----------------------------------------------------------+----------------------------------+------------------+----------------+
-|  Clock Signal  |                       Enable Signal                       |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+----------------+-----------------------------------------------------------+----------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG | uart_audio_inst/uart_transmitter/bit_index                | reset_IBUF                       |                2 |              8 |
-|  clk_IBUF_BUFG |                                                           | reset_IBUF                       |                4 |             12 |
-|  clk_IBUF_BUFG | uart_audio_inst/uart_transmitter/baud_counter[15]_i_1_n_0 | reset_IBUF                       |                9 |             32 |
-|  clk_IBUF_BUFG |                                                           |                                  |               12 |             34 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_C5_14 |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_D4_2  |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_C4_9  |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_G4_7  |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_B4_13 |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_A4_4  |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_F4_11 |                8 |             62 |
-|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_E4_0  |                8 |             62 |
-+----------------+-----------------------------------------------------------+----------------------------------+------------------+----------------+
++----------------+-----------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                       Enable Signal                       |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | uart_audio_inst/uart_transmitter/bit_index                | debounce_all/reset_button/reset                  |                2 |              8 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/reset_button/reset                  |                3 |             12 |
+|  clk_IBUF_BUFG | uart_audio_inst/uart_transmitter/baud_counter[15]_i_1_n_0 | debounce_all/reset_button/reset                  |                6 |             32 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/reset_button/duration[0]_i_1__7_n_0 |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/send_button/duration[0]_i_1__8_n_0  |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_0/duration[0]_i_1_n_0          |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_1/duration[0]_i_1__0_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_2/duration[0]_i_1__1_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_3/duration[0]_i_1__2_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_4/duration[0]_i_1__3_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_5/duration[0]_i_1__4_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_7/duration[0]_i_1__6_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | debounce_all/tone_6/duration[0]_i_1__5_n_0       |                5 |             36 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_D4_1                  |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_C5_5                  |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_E4                    |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_A4_3                  |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_G4                    |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_F4_2                  |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_B4_4                  |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           | uart_audio_inst/tones/temp_C4_0                  |                8 |             62 |
+|  clk_IBUF_BUFG |                                                           |                                                  |               25 |             70 |
++----------------+-----------------------------------------------------------+--------------------------------------------------+------------------+----------------+
 
 

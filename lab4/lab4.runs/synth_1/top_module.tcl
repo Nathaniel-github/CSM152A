@@ -30,6 +30,11 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/debouncer.v
+  C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/debouncer_wrapper.v
+  C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/multiplexing_LED.v
+  C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/multiplexing_display.v
+  C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/seven_seg_disp.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/tone_clock_divider.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/tone_switcher.v
   C:/Users/eayal/OneDrive/Desktop/CS_M152A_Labs/lab4/lab4.srcs/sources_1/new/uart_audio.v

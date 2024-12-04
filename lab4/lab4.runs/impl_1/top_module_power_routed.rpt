@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Nov 30 04:41:51 2024
+| Date             : Wed Dec  4 02:04:43 2024
 | Host             : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.076        |
+| Total On-Chip Power (W)  | 0.084        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.004        |
+| Dynamic (W)              | 0.013        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      499 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      126 |     20800 |            0.61 |
-|   CARRY4       |    <0.001 |       68 |      8150 |            0.83 |
-|   Register     |    <0.001 |      291 |     41600 |            0.70 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      466 |       --- |             --- |
-| I/O            |    <0.001 |       13 |       106 |           12.26 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      842 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      198 |     20800 |            0.95 |
+|   CARRY4       |    <0.001 |      118 |      8150 |            1.45 |
+|   Register     |    <0.001 |      489 |     41600 |            1.18 |
+|   Others       |     0.000 |       27 |       --- |             --- |
+| Signals        |     0.001 |      755 |       --- |             --- |
+| I/O            |     0.007 |       31 |       106 |           29.25 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.076 |          |           |                 |
+| Total          |     0.084 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.004 |      0.010 |
+| Vccint    |       1.000 |     0.015 |       0.006 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,8 +140,20 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| top_module           |     0.004 |
-|   uart_audio_inst    |     0.004 |
+| top_module           |     0.013 |
+|   debounce_all       |     0.002 |
+|     reset_button     |    <0.001 |
+|     send_button      |    <0.001 |
+|     tone_0           |    <0.001 |
+|     tone_1           |    <0.001 |
+|     tone_2           |    <0.001 |
+|     tone_3           |    <0.001 |
+|     tone_4           |    <0.001 |
+|     tone_5           |    <0.001 |
+|     tone_6           |    <0.001 |
+|     tone_7           |    <0.001 |
+|   display_controller |    <0.001 |
+|   uart_audio_inst    |     0.003 |
 |     tones            |     0.003 |
 |     uart_transmitter |    <0.001 |
 +----------------------+-----------+

@@ -25,8 +25,7 @@ module uart_audio (
     input wire send,         // Send enable signal
     input wire play,
     input wire [7:0] tone_switch, // Note selector (e.g., C4, D4, E4)
-    output wire tx,          // UART transmit line
-    output reg ready         // Ready signal
+    output wire tx          // UART transmit line
 );
     parameter CLK_FREQ = 100_000_000;  // System clock frequency
     parameter BAUD_RATE = 115200;     // UART baud rate
@@ -96,10 +95,15 @@ module uart_audio (
     end
     
     reg play_flag = 0;
+    reg [31:0] uart_counter = 0;       // Counter for square wave toggling
+    reg [31:0] note_duration_counter = 0; // Counter for note duration
+    reg uart_square_wave = 0;          // UART-compatible square wave
+    wire [31:0] note_period;           // Half-period of the current note
     
-    always @ (posedge play)
-    begin
-        play_flag <= ~play_flag;
+    assign note_period = CLK_FREQ / (2 * song_notes[song_index]);
+    
+    always @ (posedge play) begin
+        play_flag <= 1;
     end
     
     always @(posedge clk or posedge reset) begin
@@ -107,25 +111,41 @@ module uart_audio (
             send_sample <= 0;
             tx_data <= 0;
             play_flag <= 0;
-            ready <= 1;
-        end
-        else if (play_flag) begin
-            // if uart is ready to receive next byte
-            if (tx_ready && song_index <= 19) begin
-                tx_data <= song_notes[song_index];
-                send_sample <= 1;
-                if (send_sample) begin
-                    send_sample <= 0;
+            song_index <= 0;
+            uart_counter <= 0;
+            note_duration_counter <= 0;
+            uart_square_wave <= 0;
+        end else if (play_flag) begin
+            if (song_index < 20) begin
+                // Generate square wave
+                if (uart_counter >= note_period) begin
+                    uart_square_wave <= ~uart_square_wave;  // Toggle square wave
+                    uart_counter <= 0;
+                end else begin
+                    uart_counter <= uart_counter + 1;
                 end
-                song_index <= song_index + 1;
-            end
-            else if (song_index >= 20) begin
+    
+                // Transmit square wave via UART
+                if (tx_ready) begin
+                    tx_data <= uart_square_wave ? 8'hFF : 8'h00;
+                end
+    
+                // Track note duration
+                if (note_duration_counter >= CLK_FREQ * 2) begin // Example: play each note for 1/8 second
+                    note_duration_counter <= 0;
+                    song_index <= song_index + 1; // Move to the next note
+                end else begin
+                    note_duration_counter <= note_duration_counter + 1;
+                end
+                
+                send_sample <= 1;
+            end else begin
+                // End of song
                 song_index <= 0;
                 play_flag <= 0;
-                ready <= 1;
+                send_sample <= 0;
             end
-        end
-        else if (!play_flag && send && tx_ready) begin
+        end else if (!play_flag && send && tx_ready) begin
             tx_data <= tone_wave ? 8'hFF : 8'h00; // Send 255 (high) or 0 (low)
             send_sample <= 1;                      // Trigger UART transmission
         end else begin
@@ -159,3 +179,34 @@ endmodule
         send_sample <= 0; // Clear send signal
     end
 end*/
+
+/*always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            send_sample <= 0;
+            tx_data <= 0;
+            play_flag <= 0;
+            ready <= 1;
+        end
+        else if (play_flag) begin
+            // if uart is ready to receive next byte
+            if (tx_ready && song_index <= 19) begin
+                tx_data <= song_notes[song_index];
+                send_sample <= 1;
+                if (send_sample) begin
+                    send_sample <= 0;
+                end
+                song_index <= song_index + 1;
+            end
+            else if (song_index >= 20) begin
+                song_index <= 0;
+                play_flag <= 0;
+                ready <= 1;
+            end
+        end
+        else if (!play_flag && send && tx_ready) begin
+            tx_data <= tone_wave ? 8'hFF : 8'h00; // Send 255 (high) or 0 (low)
+            send_sample <= 1;                      // Trigger UART transmission
+        end else begin
+            send_sample <= 0; // Clear send signal
+        end
+    end*/
