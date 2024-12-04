@@ -1,3 +1,5 @@
+
+// This module comes from https://github.com/matt-alencar/fpga-uart-tx-rx/tree/master.
 module uart_tx #(
     parameter CLK_FREQ = 100_000_000,  // System clock frequency
     parameter BAUD_RATE = 115200       // UART baud rate

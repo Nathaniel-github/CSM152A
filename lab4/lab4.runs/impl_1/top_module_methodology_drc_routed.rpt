@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Dec  4 02:04:43 2024
+| Date         : Wed Dec  4 08:32:44 2024
 | Host         : LAPTOP-C9J81LRQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_module_methodology_drc_routed.rpt -pb top_module_methodology_drc_routed.pb -rpx top_module_methodology_drc_routed.rpx
 | Design       : top_module
@@ -23,161 +23,332 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 30
+             Violations found: 64
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 30         |
+| TIMING-16 | Warning  | Large setup violation         | 33         |
+| TIMING-18 | Warning  | Missing input or output delay | 31         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -59.778 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/square_wave_reg/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -60.690 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -60.867 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -60.990 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -61.049 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -61.200 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -61.216 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -61.290 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -61.311 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -61.315 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -61.331 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -61.405 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -61.426 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -61.429 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -61.445 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -61.519 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -61.540 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -61.544 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -61.560 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -61.634 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -61.655 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -61.660 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -61.676 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -61.750 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -61.771 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -61.775 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -61.791 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -61.865 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -61.886 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -61.891 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -61.907 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -61.981 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -62.002 ns between uart_audio_inst/song_index_reg_rep[3]/C (clocked by sys_clk_pin) and uart_audio_inst/wave_counter_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on rst relative to clock(s) sys_clk_pin
+An input delay is missing on ply relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on snd relative to clock(s) sys_clk_pin
+An input delay is missing on rst relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[0] relative to clock(s) sys_clk_pin
+An input delay is missing on snd relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[1] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[2] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[3] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[4] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[5] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[4] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[6] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[5] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An input delay is missing on tone_switch[7] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[6] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on anode[0] relative to clock(s) sys_clk_pin
+An input delay is missing on tone_switch[7] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An output delay is missing on anode[1] relative to clock(s) sys_clk_pin
+An output delay is missing on anode[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An output delay is missing on anode[2] relative to clock(s) sys_clk_pin
+An output delay is missing on anode[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An output delay is missing on anode[3] relative to clock(s) sys_clk_pin
+An output delay is missing on anode[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An output delay is missing on display[0] relative to clock(s) sys_clk_pin
+An output delay is missing on anode[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#16 Warning
 Missing input or output delay  
-An output delay is missing on display[1] relative to clock(s) sys_clk_pin
+An output delay is missing on display[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An output delay is missing on display[2] relative to clock(s) sys_clk_pin
+An output delay is missing on display[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An output delay is missing on display[3] relative to clock(s) sys_clk_pin
+An output delay is missing on display[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An output delay is missing on display[4] relative to clock(s) sys_clk_pin
+An output delay is missing on display[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An output delay is missing on display[5] relative to clock(s) sys_clk_pin
+An output delay is missing on display[4] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An output delay is missing on display[6] relative to clock(s) sys_clk_pin
+An output delay is missing on display[5] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An output delay is missing on led[0] relative to clock(s) sys_clk_pin
+An output delay is missing on display[6] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An output delay is missing on led[1] relative to clock(s) sys_clk_pin
+An output delay is missing on led[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An output delay is missing on led[2] relative to clock(s) sys_clk_pin
+An output delay is missing on led[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An output delay is missing on led[3] relative to clock(s) sys_clk_pin
+An output delay is missing on led[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on led[4] relative to clock(s) sys_clk_pin
+An output delay is missing on led[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on led[5] relative to clock(s) sys_clk_pin
+An output delay is missing on led[4] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An output delay is missing on led[6] relative to clock(s) sys_clk_pin
+An output delay is missing on led[5] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on led[7] relative to clock(s) sys_clk_pin
+An output delay is missing on led[6] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on led[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#31 Warning
 Missing input or output delay  
 An output delay is missing on tx relative to clock(s) sys_clk_pin
 Related violations: <none>
